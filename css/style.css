@@ -857,8 +857,12 @@ nav {
     height: 15px;
     left: 50%;
     right: 50%;
-    fill: red;
     transform: translate(-50%, -50%);
+    fill: var(----primary-text-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon:hover {
     fill: var(--accent-color);
@@ -892,23 +896,30 @@ nav {
     text-align: center;
     margin-top: 30px;
     border-radius: 4px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: none;
  }
- .form-field:focus {
-    border-color: var(--accent-color);
- }
+
  .form-field:not(:last-child) {
     margin-bottom: 28px;
  }
+ 
  .form-input {
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 42px;
     padding-right: 0;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
     border: none;
-    
+    outline: 1px solid rgba(33, 33, 33, 0.2);
+
+    transition-property: outline;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .form-input:focus {
+    outline: 1px solid var(--accent-color);
  }
  .form-label {
     position: absolute;
@@ -926,12 +937,33 @@ nav {
     top: 11px;
     width: 18px;
     height: 18px;
+    fill: var(----primary-text-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.form-input:focus ~ .form-icon {
+    fill: var(--accent-color);
+}
+/*
+ background-color: rgba(33, 150, 243, 0.9);
+ transform: translateY(100%);
+
+ transition-property: transform;
+ transition-duration: 250ms;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }*/
+
+ 
 .coment {
     resize: none;
     padding: 12px 16px;
     width: 100%;
     height: 100%;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
 }
 
 
