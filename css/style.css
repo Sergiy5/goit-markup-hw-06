@@ -52,6 +52,7 @@ p {
     padding: 0 215px;
     width: 1600px;
     height: 80px;
+    box-sizing: border-box;
     border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
@@ -130,28 +131,27 @@ nav {
 
 /*Contacts*/
 
-.contacts a {
-    margin: 0;
-}
+
 
 .contacts {
-    margin-left: 315px;
     display: flex;
-    justify-content: space-between;
+    align-content: center;
+    margin-left: 315px;
+    
 }
 
-.contacts .link:not(:last-child) {
+.mail {
     margin-right: 30px;
 }
 
 .mail,
 .tel {
-    display: inline-flex;
+    display: inline-block;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1, 14;
+    line-height: 1,14;
     letter-spacing: 0.02em;
     color: var(--second-color);
 
@@ -160,8 +160,9 @@ nav {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-icon {
-    margin-top: 2px;
+.mail-icon {   
+    display: inline-block;
+    vertical-align:middle;
     margin-right: 10px;
     background-repeat: no-repeat;
     width: 16px;
@@ -173,7 +174,9 @@ nav {
 }
 
 .tel-icon {
-    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 7px;
     width: 10px;
     height: 16px;
     fill: var(--second-color);
@@ -965,8 +968,29 @@ nav {
     line-height: calc(14/12);
     letter-spacing: 0.01em;
 }
-
-
+.form-field > .checkbox-text,
+ .checkbox-link {
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+.form-chekbox {
+-webkit-appearance: none;
+-moz-appearance: none;
+-ms-appearance: none;
+-o-appearance: none;
+}
+.checkbox-link {
+    color: var(--accent-color);
+}
+.checkbox-icon {
+    position: absolute;
+    left: 37%;
+    left: 0;
+    top: 50%;
+        
+}
 .sub-button {
     display: block;
     cursor: pointer;
