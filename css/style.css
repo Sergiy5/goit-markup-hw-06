@@ -162,7 +162,8 @@ nav {
 
 .mail-icon {   
     display: inline-block;
-    vertical-align:middle;
+    vertical-align: bottom;
+    margin-top: 10px;
     margin-right: 10px;
     background-repeat: no-repeat;
     width: 16px;
@@ -176,6 +177,7 @@ nav {
 .tel-icon {
     display: inline-block;
     vertical-align: bottom;
+    margin-top: 5px;
     margin-right: 7px;
     width: 10px;
     height: 16px;
@@ -228,6 +230,7 @@ nav {
 }
 
 .modal-btn {
+    cursor: pointer;
     padding: 15px 32px;
     font-weight: 700;
     font-size: 16px;
@@ -653,6 +656,74 @@ nav {
     background-color: var(--accent-color);
 }
 
+/*SUBSCRIBE FORM*/
+
+.subscrib-form {
+    justify-content: space-between;
+    margin-top: 72px;
+    margin-left: 93px;
+    width: 570px;
+    height: 86px;
+}
+
+.subscrib-label{
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: calc(16/14);
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.subscrib-input {
+    display: inline-flex;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 15px 16px;
+    width: 358px;
+    height: 50px;
+    font-size: 16px;
+    line-height: calc(20/16);
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background: #2F303A;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px; 
+}
+.subscrib-input:focus {
+    outline: 1px solid #2F303A;
+}
+.send-button {
+    display: inline-flex;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 7px;
+    width: 200px;
+    height: 50px;
+    color: #FFFFFF;
+    background: #2196F3;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.send-button::after {
+    display: inline-block;
+    text-align: center;
+    content:' ';
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/send.svg');
+}
+/*.subscrib-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 77%;
+    top: 50%;
+    transform: translatey(-50%);
+}*/
 /*PORTFOLIO*/
 
 
@@ -882,6 +953,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
+    margin-bottom: 2px;
     width: auto;
     font-family: 'Roboto';
     font-style: normal;
@@ -897,13 +969,12 @@ nav {
     position: relative;
     display: block;
     text-align: center;
-    margin-top: 30px;
     border-radius: 4px;
     border: none;
  }
 
  .form-field:not(:last-child) {
-    margin-bottom: 28px;
+    margin-top: 28px;
  }
  
  .form-input {
@@ -968,46 +1039,66 @@ nav {
     line-height: calc(14/12);
     letter-spacing: 0.01em;
 }
-.form-field > .checkbox-text,
+.checkbox-field {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox-field > .checkbox-text,
  .checkbox-link {
     font-size: 14px;
     line-height: calc(24/14);
     letter-spacing: 0.03em;
     color: #757575;
 }
-.form-chekbox {
+.form-checkbox {
 -webkit-appearance: none;
 -moz-appearance: none;
 -ms-appearance: none;
 -o-appearance: none;
 }
 .checkbox-link {
+    white-space: pre;
     color: var(--accent-color);
 }
-.checkbox-icon {
-    position: absolute;
-    left: 37%;
-    left: 0;
-    top: 50%;
-        
+.icon {
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    
+    border: 2px solid #2a2a2a;
+    border-radius: 2px;
+}
+.form-checkbox:checked + .icon {
+    background-image: url('../images/check.svg');
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-color);
 }
 .sub-button {
     display: block;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
     font-weight: 700;
     font-size: 16px;
     line-height: calc(30/16);
     width: 200px;
     height: 50px;
     color: #FFFFFF;
-    background: #2196F3;
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.sub-button:focus {
-    background: red;
-    border-color: #fff;
+.sub-button:focus{
+    background: #188CE8;
 }
