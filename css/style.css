@@ -857,9 +857,13 @@ nav {
     height: 15px;
     left: 50%;
     right: 50%;
+    fill: red;
     transform: translate(-50%, -50%);
 }
-*/
+.close-icon:hover {
+    fill: var(--accent-color);
+}
+
  /*FORM FIELDS*/
 
  .form {
@@ -887,6 +891,11 @@ nav {
     display: block;
     text-align: center;
     margin-top: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+ }
+ .form-field:focus {
+    border-color: var(--accent-color);
  }
  .form-field:not(:last-child) {
     margin-bottom: 28px;
@@ -898,8 +907,8 @@ nav {
     padding-right: 0;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: none;
+    
  }
  .form-label {
     position: absolute;
@@ -914,7 +923,35 @@ nav {
 .form-icon {
     position: absolute;
     left: 15px;
-    top: 15px;
-    width: 12px;
-    height: 12px;
+    top: 11px;
+    width: 18px;
+    height: 18px;
+}
+.coment {
+    resize: none;
+    padding: 12px 16px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.sub-button {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    width: 200px;
+    height: 50px;
+    color: #FFFFFF;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+.sub-button:focus {
+    background: red;
+    border-color: #fff;
 }
